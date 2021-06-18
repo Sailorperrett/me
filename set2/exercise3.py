@@ -82,15 +82,17 @@ def loops_2():
             ['*', '*', '*', '*', '*', '*', '*', '*', '*', '*'],
             ['*', '*', '*', '*', '*', '*', '*', '*', '*', '*'],
           ]
-    
+
     """
     star_square = []
-    for J in range(10):
-        
-        star_square.append(loops_1c())
+    for Y in range(10):
+        row = []
+        for X in range(10):
+            row.append("*")
+        star_square.append(row)
 
     return star_square
-    
+
 
 def loops_3():
     """Make a rising block of numbers.
@@ -113,11 +115,14 @@ def loops_3():
     TIP: notice that this needs to to return strings of numbers,
          so call str(number) to cast.
     """
-     = []
-    for I in range(10):
-        row.append("*")
-str(number)
-    return row
+    number_square = []
+    for Y in range(10):
+        row = []
+        for X in range(10):
+            row.append(str(Y))
+        number_square.append(row)
+
+    return number_square
 
 
 def loops_4():
@@ -137,7 +142,14 @@ def loops_4():
       ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
     ]
     """
-    return None
+    number_square = []
+    for Y in range(10):
+        row = []
+        for X in range(10):
+            row.append(str(X))
+        number_square.append(row)
+
+    return number_square
 
 
 def loops_5():
@@ -164,7 +176,14 @@ def loops_5():
         "There are {} green bottles".format(8)
     you'll come to see the pros and cons of each over time.
     """
-    return None
+    coordinate_square = []
+    for i in range(10):
+        row = []
+        for j in range(5):
+            row.append("(i" + str(i) + ", j" + str(j) + ")")
+        coordinate_square.append(row)
+
+    return coordinate_square
 
 
 def loops_6():
@@ -187,7 +206,15 @@ def loops_6():
     You can use a variable.
     TIP: look out for the starting condition.
     """
-    return None
+    wedge = []
+
+    for Y in range(10):
+        row = []
+        for X in range(Y + 1):
+            row.append(str(X))
+        wedge.append(row)
+
+    return wedge
 
 
 def loops_7():
@@ -211,7 +238,18 @@ def loops_7():
     This is a hard problem. Use lots of experimentation and draw
     lots of diagrams!
     """
-    return None
+    pyramid = []
+
+    for Y in range(5):
+        row = []
+        for X in range(9):
+            if abs(X - 4) <= Y:
+                row.append("*")
+            else:
+                row.append(" ")
+        pyramid.append(row)
+
+    return pyramid
 
 
 def little_printer(some_kind_of_list, exercise_name):
