@@ -11,16 +11,19 @@ import platform
 # I think this will print "hello! Let's get started" by calling the print function.
 print("hello! Let's get started")  # it printed "hello! Let's get started"
 
+# I think it will declare a variable called some_words
+# and it'll put a list of strings into it.
 some_words = ['what', 'does', 'this', 'line', 'do', '?']
 
+# I think it will declare a variable called some_words
+# and it'll put a list of strings into it.
 for word in some_words:
     print(word)
 
 for x in some_words:
     print(x)
 
-print(some_words)
-
+f
 if len(some_words) > 3:
     print('some_words contains more than 3 words')
 

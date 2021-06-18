@@ -7,7 +7,8 @@ def is_odd(a_number):
 
     Look into modulo division using the '%' operator as one way of doing this.
     """
-    return None
+    remainder = a_number % 2
+    return remainder == 1
 
 
 def fix_it(moves=True, should_move=True):
@@ -22,20 +23,33 @@ def fix_it(moves=True, should_move=True):
     "Duct Tape"
     "No Problem"
 
-    Most people write this function with 4 return statements. 
+    Most people write this function with 4 return statements.
     As an extra challenge, see if you can get that down to three.
     """
-    return None
+    if moves == True:
+        if should_move == True:
+            return "No Problem"
+        else:
+            return "Duct Tape"
+
+    if moves == False:
+        if should_move == False:
+            return "No Problem"
+        else:
+            return "WD-40"
 
 
-def loops_1a():
+def loops_1a(number_of_items=10, symbol="*"):
     """Make 10 stars.
 
     Using a for loop
     return a list of 10 items, each one a string with exacly one star in it.
     E.g.: ['*', '*', '*', '*', '*', '*', '*', '*', '*', '*']
     """
-    return None
+    row = []
+    for I in range(10):
+        row.append("*")
+    return row
 
 
 def loops_1c(number_of_items=5, symbol="#"):
@@ -45,7 +59,10 @@ def loops_1c(number_of_items=5, symbol="#"):
     string with exacly one symbol in it.
     E.g.: ['#', '#', '#', '#', '#']
     """
-    return None
+    row = []
+    for I in range(number_of_items):
+        row.append(symbol)
+    return row
 
 
 def loops_2():
@@ -65,9 +82,15 @@ def loops_2():
             ['*', '*', '*', '*', '*', '*', '*', '*', '*', '*'],
             ['*', '*', '*', '*', '*', '*', '*', '*', '*', '*'],
           ]
+    
     """
-    return None
+    star_square = []
+    for J in range(10):
+        
+        star_square.append(loops_1c())
 
+    return star_square
+    
 
 def loops_3():
     """Make a rising block of numbers.
@@ -90,7 +113,11 @@ def loops_3():
     TIP: notice that this needs to to return strings of numbers,
          so call str(number) to cast.
     """
-    return None
+     = []
+    for I in range(10):
+        row.append("*")
+str(number)
+    return row
 
 
 def loops_4():
