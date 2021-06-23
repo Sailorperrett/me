@@ -65,17 +65,14 @@ def not_number_rejector(message):
     When you do get a number, return it.
     """
     while True:
-
-        user_input = int(input("Enter a number:"))
-        if not_number_rejector:
-            return user_input
-
-        try:
-            return user_input
-        except TypeError as my_error:
-            print("Give me an actual number {my_error}:")
-        except ValueError as my_error:
-            print("Give me an actual number {my_error}:")
+        user_input = input("Enter a number:")
+        if user_input:
+            try:
+                return int(user_input)
+            except TypeError as my_error:
+                print("Give me an actual number {my_error}:")
+            except ValueError as my_error:
+                print("Give me an actual number {my_error}:")
 
 
 def super_asker(low, high):
