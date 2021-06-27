@@ -84,9 +84,15 @@ def super_asker(low, high):
     amount of code.
     """
     while True:
-        user_input = int(input(f"give me a number between{low} and {high}: "))
-        if low <= user_input <= high:
-            return user_input
+        user_input = input(f"give me a number between {low} and {high}:")
+        if user_input:
+            try:
+                if low <= int(user_input) <= high:
+                    return user_input
+            except TypeError as my_error:
+                print("Give me an actual number {my_error}:")
+            except ValueError as my_error:
+                print("Give me an actual number {my_error}:")
 
 
 if __name__ == "__main__":
