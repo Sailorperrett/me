@@ -4,6 +4,9 @@ Steps on the way to making your own guessing game.
 """
 
 
+from set3.exercise1 import not_number_rejector, super_asker
+
+
 def advancedGuessingGame():
     """Play a guessing game with a user.
 
@@ -25,34 +28,25 @@ def advancedGuessingGame():
     """
 
     print("\nWelcome to the guessing game!")
-    print("A number between _ and 30 ?")
-    LowerBound = input("Enter an Lower bound: ")
-    print("OK then, a number between {} and 30 ?".format(LowerBound))
-    LowerBound = int(LowerBound)
+    print("This game will ask for two numbers, What numberis in your mind?")
+    low_number = not_number_rejector_1("Enter an low number: ")
+    high_number = super_asker(low_number, float("inf"))
+    print("OK then, a number between {low_number} and {high_number} ?")
 
-    actualNumber = random.randint(LowerBound, 30)
+    actualNumber = random.randint(low_number, high_number)
 
     guessed = False
 
     while not guessed:
-        guessedNumber = input("Guess a number: ")
-        print(
-            "You guessed {},".format(guessedNumber),
-        )
-        if guessedNumber == actualNumber:
-            print("You got it!! It was {}".format(actualNumber))
+        guessedNumber = not_number_rejector_2("Guess a number: ")
+        print(f"You guessed {guessed_number},")
+        if guessed_number == actualNumber:
+            print(f"You got it!! It was {actualNumber}!")
             guessed = True
-        elif guessedNumber < actualNumber:
+        elif guessed_number < actualNumber:
             print("Too small, try again :'(")
         else:
             print("Too big, try again :'(")
-        if guessedNumber:
-            try:
-                return int(guessedNumber)
-            except TypeError as my_error:
-                print("Give me an actual number {my_error}:")
-            except ValueError as my_error:
-                print("Give me an actual number {my_error}:")
     return "You got it!"
 
 
