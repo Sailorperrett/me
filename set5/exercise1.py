@@ -3,23 +3,18 @@
 import requests
 
 """REFACTORING
-
 Refactoring is the process of making your code better. You are usually looking 
 to make it more readable or easier to maintain. Usually you'll do this by 
 pulling out bits of code that encapsualte one idea, especially if that idea is 
 used in several places.
-
 We've talked already about 
     ↱red→green→refactor↴
     ↜←←←←←←←←←←←←←←←←←←↩
-
 Where red means make sure the test fails if you haven't done anything, green 
 means make the test pass, however you can, now this is the reafactor part.
-
 The function below works fine, but it's long and hard to read. Identify the 
 parts that are repeated, and pull them out into their own functions. I've made 
 that easier for you by making the function stubs for the bits you need to do.
-
 Modify this function, don't write a whole new one.
 """
 
@@ -33,7 +28,7 @@ def wordy_pyramid():
     for i in range(3, 21, 2):
         url = baseURL.format(length=i)
         r = requests.get(url)
-        if r.status_code is 200:
+        if r.status_code == 200:
             message = r.text
             pyramid_list.append(message)
         else:
@@ -41,7 +36,7 @@ def wordy_pyramid():
     for i in range(20, 3, -2):
         url = baseURL.format(length=i)
         r = requests.get(url)
-        if r.status_code is 200:
+        if r.status_code == 200:
             message = r.text
             pyramid_list.append(message)
         else:
