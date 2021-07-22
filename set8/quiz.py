@@ -11,28 +11,39 @@ import time
 
 def string_please() -> str:
     """Returns a string, anything you like."""
-    return "I'm a string!"
+    the_string = "exam"
+    return the_string
+    print(string_please)
 
 
 def list_please() -> list:
     """Returns a list, anything you like."""
-    return [None, None]
+    my_list = [1, 2, 3]
+    return my_list
+    print(list_please)
 
 
 def dictionary_please() -> dict:
     """Returns a dictionary, anything you like."""
-    return {"jelly": None}
+    my_dict = {"name": "jelly"}
+    return my_dict
+    print(dictionary_please)
 
 
 def is_it_5(some_number) -> bool:
     """Returns True if the argument passed is 5, otherwise returns False."""
-    well_is_it = some_number == 5
-    return well_is_it
+    if some_number == 5:
+        return "True"
+    else:
+        return "False"
+        print(is_it_5)
 
 
 def take_five(some_number) -> int:
     """Subtracts 5 from some_number."""
-    return some_number - 5
+    the_answer = some_number - 5
+    return the_answer
+    print(take_five)
 
 
 def greet(name="Towering Timmy"):
@@ -40,7 +51,9 @@ def greet(name="Towering Timmy"):
     return a string of "Hello " and the name argument.
     E.g. if given as "Towering Timmy" it should return "Hello Towering Timmy"
     """
-    return f"Hello {name}"
+    the_answer = ("Hello" + name).upper()
+    return the_answer
+    print(greet)
 
 
 def three_counter(input_list=[1, 4, 3, 5, 7, 1, 3, 2, 3, 3, 5, 3, 7]):
@@ -53,6 +66,7 @@ def three_counter(input_list=[1, 4, 3, 5, 7, 1, 3, 2, 3, 3, 5, 3, 7]):
         if n is 3:
             count += 1
     return count
+    print(count)
 
 
 def n_counter(search_for_this, input_list=[1, 4, 3, 5, 7, 1, 3, 2, 3, 3, 5, 3, 7]):
@@ -75,7 +89,7 @@ def fizz_buzz():
         the multiples of five print "Buzz". For numbers which are
         multiples of both three and five print "FizzBuzz"."
     from https://blog.codinghorror.com/why-cant-programmers-program/
-    
+
     Return a list that has an integer if the number isn't special, 
     and a string if it is. E.g. 
         [1, 2, 'Fizz', 4, 'Buzz', 'Fizz', 7, 8, 
@@ -147,6 +161,7 @@ def best_letter_for_pets():
             longest = x
             popular_letter = letter
     return popular_letter
+    print(best_letter_for_pets)
 
 
 def make_filler_text_dictionary():
@@ -158,7 +173,7 @@ def make_filler_text_dictionary():
     >>> r = requests.get(url)
     >>> r.text # will get you a string, something like this:
     >>> "occipitosphenoidal"
-    
+
     Return a dictionary where the keys are numbers, and the values are lists of
     words. e.g.
     { 
@@ -168,7 +183,7 @@ def make_filler_text_dictionary():
         7: ['aaaaaaa', 'bbbbbbb', 'ccccccc']
     }
     Use the API to get the 3 words.
-    
+
     The dictionary should have the numbers between 3 and 7 inclusive.
     (i.e. 3, 4, 5, 6, 7 and 3 words for each)
     TIP: you'll need the requests library
