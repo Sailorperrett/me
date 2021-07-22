@@ -100,9 +100,9 @@ def dig_up_capsule(file_path):
     """
     try:
         mode = "r"  # from the docs
-        time_capsule = open(file_path, mode)
-        contents = json.load(time_capsule)
-        time_capsule.close()
+        with open(file_path, mode, encoding="utf-8") as time_capsule:
+            contents = json.load(time_capsule)
+
         keys_needed = ["Greeting", "Year", "Fact"]
         if all(key in contents for key in keys_needed):
             template = """{Greeting},\nDid you know that in {Year}, "{Fact}" was still true!

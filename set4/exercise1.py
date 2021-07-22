@@ -44,6 +44,9 @@ def get_some_details():
     return {"lastName": last, "password": password, "postcodePlusID": postcode + id}
 
 
+print(get_some_details)
+
+
 def wordy_pyramid():
     """Make a pyramid out of real words.
     There is a random word generator here:
