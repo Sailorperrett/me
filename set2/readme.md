@@ -1,2 +1,2 @@
 TODO: Reflect on what you learned this week and what is still unclear.
-I know understand the how values, variables, expressions and functions work, and knowing its very simple equations you just need to write the correct terms. And especially working through Exercise0, it took some time but now I can see you just need to fix simple things and follow through with answers or returns to complete it!
+I know understand the how values, variables, expressions and functions work, and knowing its very simple equations you just need to write the correct terms. And especially working through Exercise0, it took some time but now I can see you just need to fix simple things and follow through with answers or returns to complete it!!
